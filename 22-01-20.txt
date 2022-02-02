@@ -1,0 +1,18 @@
+/*********** TODAY **************/
+
+-. FEMU 실습 - fio, RocksDB db_Bench
+-. 논문 발표(메일 보낸 상태)
+
+/********************************/
+
+
+
+-. linux kernel module programming 실습 
+https://linux-kernel-labs.github.io/refs/heads/master/labs/kernel_api.html 
+	1. 커널 list 실습 
+	2. 모듈 중복 적재 방지 실습
+	
+-. 포렌식 제안서 작업하기  
+-. 파일시스템 실습 : fsync? 
+
+
