@@ -1,0 +1,34 @@
+2022-02-10
+/*********** TODAY **************/
+Syracuse Meeting log	
+	>Q1: DNN을 쓰면서 저장은 kvSTORE로 하는 논문이 있는가
+	>Q2: Host NDP 시에 GPU 동작과 workload를 고려할 수있는가
+	: Checkpointing과 ZNS가 잘 맞는지는 아직 잘 모르겠다
+	: GPU를 쓰는 Configuration 또한 가능하다면 추가할 것
+	: FAST'21 아래 2개 논문을 읽어볼것
+	1. Jonghyun Bae, et al., FlashNeuron: SSD-Enabled Large-Batch Training of Very Deep Neural Networks
+	2. Shine Kim, et al., Behemoth: A Flash-centric Training Accelerator for Extreme-scale DNNs
+
+-. FEMU 실습 
+	-. fio 
+	-. RocksDB db_Bench
+	-. Unwritten Contract
+	-. 딥러닝 환경
+ 
+-. 파일시스템 커널 스터디
+	-. fsync?
+	
+-. 모듈실습 커널 스터디
+	-. 커널 list 실습 (done by YJH)
+	-. 모듈 중복 적재 방지 실습
+
+-	- 	-	-	-	-
+
+
+/********************************/
+
+(2.06)Apple 174.81 (전고점 -4.4%, 182.94) ==> V반등인가?
+(2.08)Apple 171.66 (전고점 -6.17%, 182.94) ==> 실적 막은게 이정도.. 다시 반등할수 있다고?/떨어지면 어디에서 주워야 하는가 
+
+[REF] linux kernel module programming 실습 
+[URL] https://linux-kernel-labs.github.io/refs/heads/master/labs/kernel_api.html 

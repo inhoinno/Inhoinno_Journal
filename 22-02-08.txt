@@ -1,14 +1,11 @@
 
-2022-02-02
+2022-02-08
 /*********** TODAY **************/
 
 -. FEMU 실습 
 	-. fio 
 	-. RocksDB db_Bench
 	-. Unwritten Contract
-
--. 시라쿠스 미팅 준비
-	-. In Storage ZNS SSD
 
 -. 파일시스템 커널 스터디
 	-. fsync?
@@ -19,13 +16,11 @@
 
 -	- 	-	-	-	-
 
--. 미용실 가기
--. 휴대폰이전()
 
 /********************************/
 
-Apple 174.81 (전고점 -4.4%, 182.94) ==> V반등인가?
-
+(2.06)Apple 174.81 (전고점 -4.4%, 182.94) ==> V반등인가?
+(2.08)Apple 171.66 (전고점 -6.17%, 182.94) ==> 실적 막은게 이정도.. 다시 반등할수 있다고?/떨어지면 어디에서 주워야 하는가 
 
 [REF] linux kernel module programming 실습 
 [URL] https://linux-kernel-labs.github.io/refs/heads/master/labs/kernel_api.html 
