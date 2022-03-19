@@ -1,0 +1,118 @@
+2022-03-03(월요일)
+"이정도로 노력해서 성취할 수 있다면, 그게 성취할 값어치가 있는거냐?"
+"그게 힘든거냐? 그럴거면 누구나 다하지!"
+"혼자있는데도 규칙을 지키는 사람"
+"안광이 지배를 철하면서"
+	1. I. Zhang et al., “The Demikernel Datapath OS Architecture for Microsecond-scale Datacenter Systems”, SOSP, 2021.
+	2. J. Liu et al., “Scale and Performance in a Filesystem Semi-Microkernel”, SOSP, 2021.
+	3. Youngjin Kwon et al., "Strata: A Cross Media File System", SOSP, 2017.
+	4. Jonghyun Bae, et al., FlashNeuron: SSD-Enabled Large-Batch Training of Very Deep Neural Networks
+	5. Shine Kim, et al., Behemoth: A Flash-centric Training Accelerator for Extreme-scale DNNs
+
+그 사람은 자신을 정말 사랑해주는 사람을 잃었지만,
+나는 나를 사랑하지 않은 사람을 잃은것 뿐이다.
+
+
+/********** TODO (03-09까지) **************/
+
+FEMU ZNS Proposal
+	fio->F2FS->ZoneStorage
+		-> 1-to-1 mapping 
+		-> 1-to-All mapping 
+		성능이 다르더라.
+	
+FEMU ZNS 
+	-. FEMU ZNS Latency Emulation : 구현완료
+		-. 성능테스트가 필요
+	-. Proposal 준비(영어)	#또 필요한 실험과 구현에 대해서도 공유해 주면 좋겠네요.
+		1. 도입
+		2. 목표
+		3. 도전과제-어려운점
+		4. 접근방법
+		5. 기존연구의 한계점(근본적인 제한점, 문제점)
+		6. 결과 활용의 좋은 사례
+
+	(OLD talk)
+	-. FEMU ZNS SSD --> 어떤 ZNS SSD 일까요?
+				-. Conventional? 1-ALL? (02-24)
+	>>현재 아예 구현이 안되었고, 잘못짚었음. 
+	>> Interface만 구현되어있고, latency emulation과 zone mapping 은 구현이 되어있지 않음
+ 
+
+
+	-. ZNS SSD channel configuration은 어떻게 할 수 있을까요?
+		-. zns.c ? (<- Interface 부분임)
+	>> 채널 내용은 zone mapping관련이여서, 역시 이 내용이 구현되어야 channel configuration이 가능할듯
+
+(나중) SK Hynix ZNS SSD와 일치율 그래프 뽑기
+
+광희형 proposal
+	1Key-1Zone	
+	Q. KEY-DATA 구조 ? --> LOCALITY 
+	Q. GROUPING KEY and write data
+	Q. Hot/Cold seperation : --> Locality?
+/*********** TODO (02-22까지)**************/
+1. FEMU ZNS 
+
+	-. RocksDB db_Bench
+	-. Unwritten Contract
+	-. 딥러닝 환경
+
+
+
+	-. fio 02-15 Weekly Report ==> 왜 ?? ZNS가 튀어??
+		>> Prof. J "FEMU paper에 나온 수치들과 비교하여 정확한 실험이 이루어졌는지 볼 것"
+		>> Prof. S 
+			1."QEMU 안에 FEMU가 구현된것인지?"/넵
+			2."이걸 이용해서 차후 어떻게 쓸 수 있는지"
+			/좀 더 공부하고 말씀드리겠습니다
+			(ZNS Checkpointing으로 실험을 풀어나가기
+			/ZNS NVMe async request만들기
+			/ZNS FTL for random to seq이 필요?? 그러면 Tr과 비교하여 어떤 결과?>1.HW:Zone isolation 2.APP:app혹은 workload에 있는 locality를 고려함) 
+
+
+3. learn VFS interface tag:Kernel Study
+4. Filesystem exercise (myfs,minfs) tag:Kernel Study
+5. FEMU 발표하기 
+	-. nvme direct SQ, CQ in FEMU
+	-. FEMU ftl.c
+	-. FEMU zns.c
+	-. FEMU nvme
+6. FEMU NVME Emulation 
+	-. Doorbell
+	-. Device driver
+	-. nvme direct
+	-. nvme cli
+	-. Goal "Async"
+
++. Migration 할 때 Checkpointing?
+	VM Migration > storage 는 Xen으로 묶여서 FS는 못넘어감
+	메모리에 있는 live data는 빨리 옮기는 기술을 씀
+	따라서 Migration case는 더 정확히 보아야 할 듯
+/********************************/
+-	- 	-	-	-	-
+/*************DONE***************/
+-. FEMU 실습 
+	-. fio (Done by Inhoinno)
+
+FEMU ZNS 
+	-. Design zone-channel
+	-. Implement IO emulation
+
+Syracuse Meeting log	
+	>Q1: DNN을 쓰면서 저장은 kvSTORE로 하는 논문이 있는가
+	>Q2: Host NDP 시에 GPU 동작과 workload를 고려할 수있는가
+	: Checkpointing과 ZNS가 잘 맞는지는 아직 잘 모르겠다
+	: GPU를 쓰는 Configuration 또한 가능하다면 추가할 것
+	: FAST'21 아래 2개 논문을 읽어볼것
+	1. Jonghyun Bae, et al., FlashNeuron: SSD-Enabled Large-Batch Training of Very Deep Neural Networks
+	2. Shine Kim, et al., Behemoth: A Flash-centric Training Accelerator for Extreme-scale DNNs
+/********************************/
+
+(2.06)Apple 174.81 (전고점 -4.4%, 182.94) ==> V반등인가?
+(2.08)Apple 171.66 (전고점 -6.17%, 182.94) ==> 실적 막은게 이정도.. 다시 반등할수 있다고?/떨어지면 어디에서 주워야 하는가 
+(2.11)Apple 168.64 (전고점 -7.82%) 나스닥 지수 -2.78%
+(2.15)Apple 172.
+[REF] linux kernel module programming 실습 
+[URL] https://linux-kernel-labs.github.io/refs/heads/master/labs/kernel_api.html 
+[REF] 블록디바이스 vector code https://elixir.bootlin.com/linux/latest/source/include/linux/bvec.h#L20 
